@@ -10817,6 +10817,7 @@
     "net7.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.3",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core >= 7.0.4",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.4",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -10869,6 +10870,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.3, )"
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": {
+            "target": "Package",
+            "version": "[7.0.4, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
