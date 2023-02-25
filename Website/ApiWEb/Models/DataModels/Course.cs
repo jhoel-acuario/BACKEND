@@ -13,7 +13,7 @@ namespace ApiWEb.Models.DataModels
     {
         [Required, StringLength(50)]
         public string Name { get; set; }=string.Empty;
-        [Required, StringLength(100)]
+        [Required, StringLength(300)]
         public string ShortDescription { get; set; } = string.Empty;
         [Required]
         public string Description { get; set; } = string.Empty;

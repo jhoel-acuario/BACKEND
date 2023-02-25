@@ -1,6 +1,8 @@
 // 1. usando para trabajar con EntityFramework
 using Microsoft.EntityFrameworkCore;
 using ApiWEb.DataAccess;
+using ApiWEb.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //. Conexion con DB sql server
@@ -15,9 +17,25 @@ var connectionString = builder.Configuration.GetConnectionString(DBname);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+//4.. Añadir Servicios personalizados
+builder.Services.AddScoped<IStudentsInterface, StudentsServices>();
+//TODO: Añidir el reato de interfaces
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//Configuracion de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CorsPlicy", builder =>
+    {
+        builder.AllowAnyOrigin();//Cualquier app puede hacer peticion
+        builder.AllowAnyMethod();//Cualquier metodo de peticion
+        builder.AllowAnyHeader();//Cualquier cabezera
+    });
+});
 
 var app = builder.Build();
 
@@ -33,5 +51,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+//6 ABUSO DE CORS
+app.UseCors("CorsPlicy");
 
 app.Run();

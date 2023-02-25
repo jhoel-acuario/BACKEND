@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 
 
@@ -274,6 +276,248 @@ namespace LinqSnippts
 
             var takeWhileSmallerThan4 = myList.TakeWhile(num => num < 4); // { 1,2,3 }
 
+        }
+        //PAGINACION
+        static public IEnumerable<T> GetPage<T>(IEnumerable<T> collection, int numberPage, int resultPage)
+        {
+            int startIndex = (numberPage -1) * resultPage;
+            return collection.Skip(startIndex).Take(resultPage);
+        }
+        //VARIABLES 
+        static public void LinqVariable()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9,10 };
+
+            var result = from number in numbers
+                         let numberValue = numbers.Average()
+                         let nSquard = Math.Pow(number, 2)
+                         where nSquard > numberValue
+                         select number;
+            foreach (var item in result)
+            {
+                Console.WriteLine("Number :{0} Square: {1}", item, Math.Pow(item, 2));
+            }
+        }
+        //ZIP
+        static public void ZipLinq()
+        {
+            int[] numbers = { 1, 2, 3, 4, 5};
+            string[] stringNumber = { "uno", "dos", "tres", "cuatro", "cinco" };
+
+            IEnumerable<string> zipNumber = numbers.Zip(stringNumber, (number, word)=> number +"="+ word); //{"1=uno", "2=dos"}
+        }
+        //REPEAT && RANGE  
+        static public void RepeatLinq()
+        {
+            //Generar una colecion de 1 a 100
+            IEnumerable<int> valor = Enumerable.Range(0, 1000);
+
+            IEnumerable<string> repeatValue = Enumerable.Repeat("x", 5); // result {"x",x,x,x,x}
+        }
+        static public void StudentLinq()
+        {
+            var classRoom = new[]
+            {
+                new Student
+                {
+                    Id=1,
+                    Name="jhoel",
+                    Grade = 90,
+                    Certifed= true
+                },
+                new Student
+                {
+                    Id=3,
+                    Name="Ana",
+                    Grade = 50,
+                    Certifed= true
+                },
+                new Student
+                {
+                    Id=4,
+                    Name="hyto",
+                    Grade = 100,
+                    Certifed= false
+                },
+                new Student
+                {
+                    Id=5,
+                    Name="tuyo",
+                    Grade = 80,
+                    Certifed= true
+                }
+            };
+            var result = from student in classRoom
+                         where student.Certifed
+                         select student;
+            var result1 = from student in classRoom
+                          where student.Certifed ==false
+                          select student;
+            var reusl2 = from student in classRoom
+                         where student.Grade >= 60 && student.Certifed == true
+                         select student.Name; //Devuelve todos los nombres de los aprobados
+        }
+        //ALL
+        static public void AllLinq()
+        {
+            var number = new List<int>() { 1, 2, 3, 4, 56, 4,5, 5 };
+
+            bool result = number.All(n => n < 10); //true
+            bool result2 = number.All(n => n >= 2); //false
+
+            var numberValue = new List<int>(); //lista vacia
+
+            bool result3 = number.All(x => x >= 0); //true
+
+        }
+        //AGREGACION
+        static public void AgregateLinq()
+        {
+            var number = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int sum = number.Aggregate((prev, current) => prev + current);
+            //0,1 =1
+            //1,2 =3
+            //3,4= 7
+
+            string[] work = { "hola", "como estas", "jhoel" };
+            var result = work.Aggregate((prev, current) => prev + current);
+            //"", "hola"=> hola
+            //"hola", "como estas"=> hola como estas
+            //"hola como estas", "jhoel" => hola como estas jhoel
+        }
+        //DISCTINCT
+        static public void DisctinctLinq()
+        {
+            var number = new List<int>() { 1, 2, 3, 55, 75,9, 8, 20, 10 };
+
+            IEnumerable<int> numberValue = number.Distinct();
+        }
+        //GROUPBY - AGRUPACION
+
+        static public void GroupByLinq()
+        {
+            int[] numbers= { 1, 2, 3, 4, 5, 6, 78, 9 };
+            var result = numbers.GroupBy(x => x % 2 == 0);
+            foreach (var item in result)
+            {
+                foreach (var item1 in item)
+                {
+                    Console.WriteLine(item1);//1,2,3,55,9 -- 8,10,20
+                    
+                }
+            }
+            var classRoom = new[]
+           {
+                new Student
+                {
+                    Id=1,
+                    Name="jhoel",
+                    Grade = 90,
+                    Certifed= true
+                },
+                new Student
+                {
+                    Id=3,
+                    Name="Ana",
+                    Grade = 50,
+                    Certifed= true
+                },
+                new Student
+                {
+                    Id=4,
+                    Name="hyto",
+                    Grade = 100,
+                    Certifed= false
+                },
+                new Student
+                {
+                    Id=5,
+                    Name="tuyo",
+                    Grade = 80,
+                    Certifed= true
+                }
+            };
+            var VertifiedValue = classRoom.GroupBy(x => x.Certifed);
+
+            foreach (var item in VertifiedValue)
+                Console.WriteLine("------------{0}---------------", item.Key);
+            {
+                foreach (var item1 in classRoom)
+                {
+                    Console.WriteLine(item1.Name);
+                    
+                }
+
+
+            }
+
+        }
+
+        static public void RelationLinq()
+        {
+            List<Post> posts = new List<Post>()
+            {
+                new Post
+                {
+                    Id=1,
+                    Title="ni idea",
+                    Description="hola como estan",
+                    Created=DateTime.Now,
+                    Comments = new List<Comment>()
+                    {
+                        new Comment
+                        {
+                            Id=1,
+                            Title= "Titulo 01",
+                            Content="lorem",
+                            Created= DateTime.Now
+
+                        }
+
+                    }
+                },
+                 new Post
+                {
+                    Id=1,
+                    Title="ni idea 02",
+                    Description="hola como estan",
+                    Created=DateTime.Now,
+                    Comments = new List<Comment>()
+                    {
+                        new Comment
+                        {
+                            Id=1,
+                            Title= "Titulo 002",
+                            Content="lorem",
+                            Created= DateTime.Now
+
+                        }
+
+                    }
+                },
+                  new Post
+                  {
+                    Id=1,
+                    Title="ni idea 03",
+                    Description="hola como estan",
+                    Created=DateTime.Now,
+                    Comments = new List<Comment>()
+                    {
+                        new Comment
+                        {
+                            Id=1,
+                            Title= "Titulo 03",
+                            Content="lorem",
+                            Created= DateTime.Now
+
+                        }
+
+                    }
+                  }
+            };
+
+            var result = posts.SelectMany(p => p.Comments, (p, comment) => new { postId = p.Id, CommentContent = comment.Content });
+            //muestra el id 1 --> con el comentario de id 1
         }
     }
 }
