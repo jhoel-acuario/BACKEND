@@ -33,7 +33,7 @@ builder.Services.AddCors(options =>
     {
         builder.AllowAnyOrigin();//Cualquier app puede hacer peticion
         builder.AllowAnyMethod();//Cualquier metodo de peticion
-        builder.AllowAnyHeader();//Cualquier cabezera
+        builder.AllowAnyHeader();//Cualquier cabecera
     });
 });
 
