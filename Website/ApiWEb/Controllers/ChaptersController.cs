@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ApiWEb.DataAccess;
 using ApiWEb.Models.DataModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace ApiWEb.Controllers
 {
@@ -23,6 +25,7 @@ namespace ApiWEb.Controllers
 
         // GET: api/Chapters
         [HttpGet]
+        [ Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme,Roles ="Administrator, User")]
         public async Task<ActionResult<IEnumerable<Chapter>>> GetChapters()
         {
           if (_context.Chapters == null)

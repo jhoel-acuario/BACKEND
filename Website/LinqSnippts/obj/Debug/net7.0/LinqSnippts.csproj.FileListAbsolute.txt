@@ -10,3 +10,15 @@ C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\LinqSnippts\obj\Debug\net7.
 C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\refint\LinqSnippts.dll
 C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.pdb
 C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\ref\LinqSnippts.dll
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\bin\Debug\net7.0\LinqSnippts.deps.json
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\bin\Debug\net7.0\LinqSnippts.dll
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\bin\Debug\net7.0\LinqSnippts.pdb
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.csproj.AssemblyReference.cache
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.AssemblyInfoInputs.cache
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.AssemblyInfo.cs
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.csproj.CoreCompileInputs.cache
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.dll
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\refint\LinqSnippts.dll
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\LinqSnippts.pdb
+C:\Users\solange\Documents\BACKEND\Website\LinqSnippts\obj\Debug\net7.0\ref\LinqSnippts.dll

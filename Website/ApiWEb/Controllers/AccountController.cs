@@ -1,4 +1,5 @@
 ﻿
+using ApiWEb.DataAccess;
 using ApiWEb.Helpers;
 using ApiWEb.Models.DataModels;
 using ApiWEb.Models.UserValidatorToken;
@@ -8,14 +9,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiWEb.Controllers
 {
-    [Route("api/[controler]/[action]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AccountController:ControllerBase
     {
         private JwtSetting _jwtSetting;
-        public AccountController(JwtSetting jwtSetting) {
+        private readonly UniversityDbContext _context;
+        public AccountController(JwtSetting jwtSetting, UniversityDbContext context) {
             _jwtSetting = jwtSetting;
+            _context = context;
         }
+        //TODO: CAMBIAR POR USUARIO REALES DE DB
         private IEnumerable<User> Logins = new List<User>()
         {
             new User()

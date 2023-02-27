@@ -548,3 +548,4 @@ C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\ApiWEb\obj\Debug\net7.0\ref
 C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\ApiWEb\obj\Debug\net7.0\ApiWEb.pdb
 C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\ApiWEb\obj\Debug\net7.0\ApiWEb.genruntimeconfig.cache
 C:\Users\jhoel\Desktop\jhoel-acuario\BACKEND\Website\ApiWEb\obj\Debug\net7.0\ref\ApiWEb.dll
+C:\Users\solange\Documents\BACKEND\Website\ApiWEb\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
