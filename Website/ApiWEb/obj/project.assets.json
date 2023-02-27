@@ -10864,19 +10864,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jhoel\\.nuget\\packages\\": {}
+    "C:\\Users\\solange\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jhoel\\Desktop\\jhoel-acuario\\BACKEND\\Website\\ApiWEb\\ApiWEb.csproj",
+      "projectUniqueName": "C:\\Users\\solange\\Documents\\BACKEND\\Website\\ApiWEb\\ApiWEb.csproj",
       "projectName": "ApiWEb",
-      "projectPath": "C:\\Users\\jhoel\\Desktop\\jhoel-acuario\\BACKEND\\Website\\ApiWEb\\ApiWEb.csproj",
-      "packagesPath": "C:\\Users\\jhoel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jhoel\\Desktop\\jhoel-acuario\\BACKEND\\Website\\ApiWEb\\obj\\",
+      "projectPath": "C:\\Users\\solange\\Documents\\BACKEND\\Website\\ApiWEb\\ApiWEb.csproj",
+      "packagesPath": "C:\\Users\\solange\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\solange\\Documents\\BACKEND\\Website\\ApiWEb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jhoel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\solange\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
