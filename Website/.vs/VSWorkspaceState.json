@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ApiWEb",
+    "\\ApiWEb\\DataAccess",
+    "\\ApiWEb\\Migrations",
+    "\\ApiWEb\\Models",
+    "\\ApiWEb\\Models\\DataModels"
+  ],
+  "SelectedNode": "\\ApiWEb\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

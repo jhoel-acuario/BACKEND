@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\solange\\.nuget\\packages\\": {}
+    "C:\\Users\\jhoel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\solange\\Documents\\BACKEND\\Website\\LinqSnippts\\LinqSnippts.csproj",
+      "projectUniqueName": "C:\\Users\\jhoel\\Desktop\\jhoel-acuario\\BACKEND\\Website\\LinqSnippts\\LinqSnippts.csproj",
       "projectName": "LinqSnippts",
-      "projectPath": "C:\\Users\\solange\\Documents\\BACKEND\\Website\\LinqSnippts\\LinqSnippts.csproj",
-      "packagesPath": "C:\\Users\\solange\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\solange\\Documents\\BACKEND\\Website\\LinqSnippts\\obj\\",
+      "projectPath": "C:\\Users\\jhoel\\Desktop\\jhoel-acuario\\BACKEND\\Website\\LinqSnippts\\LinqSnippts.csproj",
+      "packagesPath": "C:\\Users\\jhoel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jhoel\\Desktop\\jhoel-acuario\\BACKEND\\Website\\LinqSnippts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\solange\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jhoel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
